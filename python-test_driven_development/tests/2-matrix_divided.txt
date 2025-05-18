@@ -16,7 +16,7 @@ Doctest for function that divides a matrix
     >>> matrix_divided([[1, 2], [3, 4]], "3")
     Traceback (most recent call last):
     ...
-    TypeError: div must be a number
+    TypeError: div must be a numbers
 
 
     >>> matrix_divided([[3]], 3)
