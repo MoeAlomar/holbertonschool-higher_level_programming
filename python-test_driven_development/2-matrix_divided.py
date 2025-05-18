@@ -8,7 +8,7 @@ def matrix_divided(matrix, div):
                     for num in list] for list in matrix]
 
     """list length validation"""
-    bool_list = [len(matrx[0]) == len(list) for list in matrix]
+    bool_list = [len(matrix[0]) == len(list) for list in matrix]
 
     """validations"""
     if not all(all(list) for list in bool_matrix):
@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
     elif not all(bool_list):
         raise TypeError("Each row of the matrix must have the same size")
     elif not isinstance(div, (int, float)):
-        raise TypeEror("div must be a number")
+        raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
 
