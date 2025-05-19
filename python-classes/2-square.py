@@ -8,6 +8,7 @@ class Square:
     Attributes:
     attr1 (size): size of square
     """
+
     def __init__(self, size=0):
         """
         Args:
