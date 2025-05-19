@@ -1,25 +1,20 @@
 #!/usr/bin/python3
-"""Defines a class Square with private size attribute and validation."""
+"""This module creates a class named Square"""
+
 
 class Square:
-    """Represents a square.
+    """A class named Square
 
     Attributes:
-        __size (int): The size of the square (private).
+    attr1 (size): size of square
     """
-
     def __init__(self, size=0):
-        """Initializes a new Square.
-
+        """
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
+        size (int): size for __size attribute of class instance
         """
         if type(size) != int:
-            raise TypeError("Size must be an integer")
+            raise TypeError("size must be an integer")
         if size < 0:
-            raise ValueError("Size must be >= 0")
+            raise ValueError("size must be >= 0")
         self.__size = size
