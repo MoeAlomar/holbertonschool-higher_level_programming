@@ -43,8 +43,8 @@ class Square:
             (int): size of square.
         """
         return self.__size
+    
     @size.setter
-
     def size(self, value):
         """Setter method to instance size.
 
