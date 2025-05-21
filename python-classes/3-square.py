@@ -26,10 +26,11 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
     def area(self):
         """Defined area method in class square
 
         Returns:
             (int): area of the square be returning self.__size * self.__size.
         """
-        return self.__size * self.__size
+        return self.__size ** 2
