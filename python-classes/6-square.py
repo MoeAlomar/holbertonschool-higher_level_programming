@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Square module.
+"""square module.
 
-This module defines the Square class which models a geometric square.
-It includes validation for the size attribute, along with methods
-to compute the area and access or modify the size safely.
+This module defines a Square class that represents a square
+by its size and position,
+and allows computation of its area and visual representation
+with the `#` character.
 """
 
 
@@ -11,8 +12,9 @@ class Square:
     """Represents a square.
 
     Attributes:
-        __size (int): The length of a side of the square (private).
-        __position (tuple): position of the square in the output screen
+        __size (int): Size of one side of the square (private).
+        __position (tuple): Position (horizontal and vertical offset)
+        used when printing the square.
     """
     def __init__(self, size=0, position=(0,0)):
         """Initializes a new Square instance.
@@ -22,7 +24,7 @@ class Square:
             position (int): two positive integer tuple.
 
         Raises:
-            TypeError: If size is not an integer or if position value is not an integer.
+            TypeError: If size is not an integer, or if position is not a tuple of 2 positive integers.
             ValueError: If size is less than 0.
         """
         if not isinstance(size, int):
@@ -82,7 +84,7 @@ class Square:
             to determine the position of square in output.
 
         Raises:
-            TypeError: in case any value in position tuple is not an integer.     
+            TypeError: in case any value in position tuple is not an integer or value < 2.     
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -100,18 +102,17 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square in the shape of (#)
+        """Prints the square with the `#` character based on its
+        size and position.
 
-        if size empty it will print a newline
-        otherwise it will print the square with (#), also now it will print space/
-        s above and before the square depending on position tuple values.
+        If size is 0, prints an empty line.
+        The square is printed using `position[0]` spaces (horizontal offset)
+        and `position[1]` newlines (vertical offset).
         """
-        for i in range(self.__position[1]):
-            print()
         if self.__size == 0:
             print()
-        for i in range(self.__size):
-            print(" " * self.__position[0], end="")            
-            for j in range(self.__size):
-                print("#", end="")
-            print()
+        else:
+            for i in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
