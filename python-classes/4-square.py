@@ -41,7 +41,7 @@ class Square:
         Returns:
             (int): size of square.
         """
-        return size
+        return self.__size
     
     def size(self, value):
         """Setter method to instance size.
@@ -54,3 +54,4 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+        self.__size = value
