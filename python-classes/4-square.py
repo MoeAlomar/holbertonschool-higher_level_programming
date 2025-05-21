@@ -27,14 +27,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-    def area(self):
-        """Defined area method in class square
-
-        Returns:
-            (int): area of the square be returning self.__size * self.__size.
-        """
-        return self.__size ** 2
-
     @property
     def size(self):
         """Getter method of size instance
@@ -46,17 +38,25 @@ class Square:
     
     @size.setter
     def size(self, value):
-        """Setter method to instance size.
+        """Sets the size of the square.
 
         Args:
             value (int): The new size value.
 
         Raises:
-            TypeError: if size is not an integer.
-            ValueError: if size value is < 0.
+            TypeError: if value is not an integer.
+            ValueError: if value is < 0.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+        def area(self):
+        """Defined area method in class square
+
+        Returns:
+            (int): area of the square be returning self.__size * self.__size.
+        """
+        return self.__size ** 2
