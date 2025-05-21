@@ -11,7 +11,6 @@ class Square:
     The size must be an integer >= 0. It is stored as a private attribute
     initialized by default to 0.
     """
-
     def __init__(self, size=0):
         """Initializes an instance of square
 
@@ -27,4 +26,3 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-
