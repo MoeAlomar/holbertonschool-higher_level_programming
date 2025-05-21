@@ -20,8 +20,9 @@ class Square:
         """Initializes a new Square instance.
 
         Args:
-            size (int): The size of the square. Defaults to 0.
-            position (int): two positive integer tuple.
+           size (int, optional): Size of the square (default is 0).
+            position (tuple, optional): Position offset when printing
+            (default is (0, 0)).
 
         Raises:
             TypeError: If size is not an integer, or if position is not a tuple of 2 positive integers.
