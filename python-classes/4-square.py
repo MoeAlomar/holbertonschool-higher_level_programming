@@ -53,7 +53,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-        def area(self):
+    def area(self):
         """Defined area method in class square
 
         Returns:
