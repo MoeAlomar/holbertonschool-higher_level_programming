@@ -40,13 +40,16 @@ class Square:
         """Getter method of size instance
 
         Returns:
-            (int): size of square.
+            int: size of square.
         """
         return self.__size
     
     @size.setter
     def size(self, value):
         """Setter method to instance size.
+
+        Args:
+            value (int): The new size value.
 
         Raises:
             TypeError: if size is not an integer.
