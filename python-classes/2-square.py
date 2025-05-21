@@ -1,23 +1,22 @@
 #!/usr/bin/python3
-"""Defines the Square class.
+"""This module creates a class named Square
 
-This module provides a class to represent a square,
-with basic size validation.
+It makes a square with a specified size.
 """
 
 
 class Square:
     """Represents a square with a validated size.
 
-    This class defines a square and validates that the size is an integer
-    greater than or equal to zero. The size is stored as a private attribute.
+    The size must be an integer >= 0. It is stored as a private attribute
+    initialized by default to 0.
     """
+
     def __init__(self, size=0):
-        """Initializes a Square instance.
+        """Initializes an instance of square
 
         Args:
-            size (int, optional): The size (length of a side) of the square.
-            Defaults to 0.
+            size (int): size for __size attribute of class instance
 
         Raises:
             TypeError: if size is not an integer.
@@ -28,3 +27,4 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
