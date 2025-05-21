@@ -12,6 +12,7 @@ class Square:
 
     Attributes:
         __size (int): The length of a side of the square (private).
+        __position (tuple): position of the square in the output screen
     """
     def __init__(self, size=0, position=(0,0)):
         """Initializes a new Square instance.
@@ -29,8 +30,10 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+        if not isinstance(position, tuple) or len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         for i in position:
-            if not isinstance(i, int):
+            if not isinstance(i, int) or i < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
@@ -81,8 +84,10 @@ class Square:
         Raises:
             TypeError: in case any value in position tuple is not an integer.     
         """
+        if not isinstance(value, tuple) or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         for i in value:
-            if not isinstance(i, int):
+            if not isinstance(i, int) or i < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -101,12 +106,12 @@ class Square:
         otherwise it will print the square with (#), also now it will print space/
         s above and before the square depending on position tuple values.
         """
-        for i in range(self.position[1]):
+        for i in range(self.__position[1]):
             print()
         if self.__size == 0:
             print()
         for i in range(self.__size):
-            print(" " * self.position[0], end="")            
+            print(" " * self.__position[0], end="")            
             for j in range(self.__size):
                 print("#", end="")
             print()
