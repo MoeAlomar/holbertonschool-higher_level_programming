@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This module creates a class named Square"""
+"""This module creates a class named Square
+
+it makes a square with a specified size.
+"""
 
 
 class Square:
@@ -10,7 +13,8 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """
+        """Initializes an instance of square
+
         Args:
         size (int): size for __size attribute of class instance
         """
