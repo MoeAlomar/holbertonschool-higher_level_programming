@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """This module defines a Square class with a private size attribute.
 
-The size of the square is stored privately to enforce encapsulation.
+This module contains a class used to represent a square
+by storing the size (length of one side) as a private attribute.
+The Square class does not expose the size directly and
+does not include additional behavior such as computing area.
 """
 
 
