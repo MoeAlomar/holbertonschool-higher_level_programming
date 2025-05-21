@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a Square class with a private size attribute.
+"""Module defining a Square class with size encapsulation.
 
 This module contains a class used to represent a square
 by storing the size (length of one side) as a private attribute.
@@ -9,12 +9,15 @@ does not include additional behavior such as computing area.
 
 
 class Square:
-    """Here in this class we will define __init__ method which will assign the __size value"""
+    """Represents a square.
 
+    This class defines a square by encapsulating its size.
+    The size is stored as a private attribute and cannot be accessed directly.
+    """
     def __init__(self, size):
-        """initializes the square with a given size.
+        """Initializes a Square instance with a given size.
 
         Args:
-            size: the size of the square should be an integer (no type/value validation).
+            size (int or float): The size (length of one side) of the square.
         """
         self.__size = size
