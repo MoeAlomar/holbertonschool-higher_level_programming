@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """square module.
 
-This module defines a Square class that represents a square
-by its size and position,
+This module defines a Square class that represents
+a square by its size and position,
 and allows computation of its area and visual representation
 with the `#` character.
 """
@@ -71,15 +71,15 @@ class Square:
         """A method to get the position tuple value.
 
         Returns:
-            (int) tuple: two int tuple that determine the posi/
-            tion of the square in the buffer (output)
+            (int) tuple: two int tuple that determine the 
+            position of the square in the buffer (output)
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """a setter method for the instance position tuple.
-        
+
         Args:
             (tuple) value: is an integer tuple 
             to determine the position of square in output.
