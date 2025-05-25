@@ -12,6 +12,7 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
+    
     def __init__(self, width=0, height=0):
         """initializes instance of a rectangle
         Args:
