@@ -7,14 +7,16 @@ with private variables height and width
 class Rectangle:
     """Represents Rectangle class with validated width and height
 
-    the width must be a positive integer to be accepted as a value and so is the height
-    otherwise ValueError or TypeError may be raised.
+    the width must be a positive integer to be accepted as a value
+    and so is the height otherwise ValueError or TypeError may be raised.
     """
-    def __init__(self,width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """initializes instance of a rectangle
         Args:
-            width (int, optinal): is the specified width of the rectangle (default is 0).
-            height (int): is the specified height if the rectangle with a default value 0.
+            width (int, optinal): is the specified width
+            of the rectangle (default is 0).
+            height (int): is the specified height
+            if the rectangle with a default value 0.
 
         Raises:
             TypeError: if width or height are not integers.
