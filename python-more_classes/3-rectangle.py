@@ -116,7 +116,7 @@ class Rectangle:
         
         rect = []
         for i in range(self.__height - 1):
-            for j in range(self.__width)
+            for j in range(self.__width):
                 rect.append("#")
             rect.append("\n")
         return ("".join(rect))
