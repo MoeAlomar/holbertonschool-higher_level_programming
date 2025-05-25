@@ -121,8 +121,8 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
-    
+
     def __repr__(self):
         """This method prints the repr of class Rectangle it
-        will return the instance of creating Rectangle with its height and width."""
+        returns the instance of creating Rectangle with height and width."""
         return f"Rectangle({self.__width}, {self.__height})"
