@@ -38,7 +38,7 @@ class Rectangle:
         Returns:
             int: the current width of the rectangle.
         """
-        return width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -64,7 +64,7 @@ class Rectangle:
         Returns:
             height (int): the current height of the rectangle.
         """
-        return height
+        return self.__height
     
     @height.setter
     def height(self, value):
