@@ -3,14 +3,14 @@
 with private variables height and width
 """
 
-global number_of_instances = 0
+
 class Rectangle:
     """Represents Rectangle class with validated width and height
 
     the width must be a positive integer to be accepted as a value
     and so is the height otherwise ValueError or TypeError may be raised.
     """
-
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """initializes instance of a rectangle
         Args:
@@ -33,7 +33,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -133,5 +133,5 @@ class Rectangle:
         """This function is supposed to print a message
         if object of class Rectangle is deleted.
         """
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
