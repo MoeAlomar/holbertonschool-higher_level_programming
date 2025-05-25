@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """Empty Rectangle module that defines Rectangle class
-with private variables height and width"""
+with private variables height and width
+"""
 
 
 class Rectangle:
     """Represents Rectangle class with validated width and height
 
     the width must be a positive integer to be accepted as a value and so is the height
-    otherwise ValueError or TypeError may be raised."""
+    otherwise ValueError or TypeError may be raised.
+    """
     def __init__(self,width = 0, height = 0):
         """initializes instance of a rectangle
         Args:
@@ -21,12 +23,12 @@ class Rectangle:
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
-            raise ValueError("width must be a >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = width
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
-            raise ValueError("height must be a >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = height
     
     @property
@@ -52,7 +54,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be a >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = width
     
     @property
@@ -78,6 +80,6 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be a >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = height
     
