@@ -21,11 +21,11 @@ class Square:
 
         Args:
             size (int, optional): Size of the square (default is 0).
-            position (tuple, optional): Position offset when printing
-            (default is (0, 0)).
+            position (tuple, optional): Position offset
+            when printing (default is (0, 0)).
 
         Raises:
-            TypeError: If size is not an integer, or if position is not a tuple of 2 positive integers.
+            TypeError: If size is not an integer, position is not a tuple.
             ValueError: If size is less than 0.
         """
         if not isinstance(size, int):
@@ -34,10 +34,12 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
         if not isinstance(position, tuple) or len(position) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            msg = "position must be a tuple of 2 positive integers"
+            raise TypeError(msg)
         for i in position:
             if not isinstance(i, int) or i < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                msg = "position must be a tuple of 2 positive integers"
+                raise TypeError(msg)
         self.__position = position
 
     @property
@@ -71,7 +73,7 @@ class Square:
         """A method to get the position tuple value.
 
         Returns:
-            (int) tuple: two int tuple that determine the 
+            (int) tuple: two int tuple that determine the
             position of the square in the buffer (output)
         """
         return self.__position
@@ -81,11 +83,12 @@ class Square:
         """a setter method for the instance position tuple.
 
         Args:
-            (tuple) value: is an integer tuple 
+            (tuple) value: is an integer tuple
             to determine the position of square in output.
 
         Raises:
-            TypeError: in case any value in position tuple is not an integer or value < 2.     
+            TypeError: in case any value in position
+            tuple is not an integer or value < 2.
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
