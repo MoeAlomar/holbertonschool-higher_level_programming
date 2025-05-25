@@ -154,10 +154,10 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-    def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
+class square(cls, size=0):
+    """Return a new Rectangle with width and height equal to size.
 
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return (cls(size, size))
+    Args:
+        size (int): The width and height of the new Rectangle.
+    """
+    return (cls(size, size))
