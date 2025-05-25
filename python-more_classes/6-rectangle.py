@@ -4,13 +4,13 @@ with private variables height and width
 """
 
 
-number_of_instances = 0
 class Rectangle:
     """Represents Rectangle class with validated width and height
 
     the width must be a positive integer to be accepted as a value
     and so is the height otherwise ValueError or TypeError may be raised.
     """
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """initializes instance of a rectangle
         Args:
