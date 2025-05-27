@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """this function checks if the
-    provided function is of an inherited class provided but 
+    provided function is of an inherited class provided but
     not from the same class
 
     Args:
