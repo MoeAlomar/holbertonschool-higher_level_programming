@@ -8,11 +8,11 @@ area() is not implemented
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", a)
-<name> must be an integer
+x must be an integer
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", 0)
-<name> must be greater than 0
+x must be greater than 0
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", 2)
