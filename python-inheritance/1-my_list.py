@@ -5,7 +5,8 @@ using sort function in python.
 
 
 class MyList(list):
-    """here we are recieving list and sort it using sort function in python"""
+    """here we are recieving list and sort it using sort function in python
+    """
     my_list = list
     def print_sorted(self):
         """
@@ -14,3 +15,4 @@ class MyList(list):
         sorted_mylist = self.copy()
         sorted_mylist.sort()
         print(sorted_mylist)
+        return sorted_mylist

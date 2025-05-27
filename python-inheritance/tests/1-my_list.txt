@@ -1,5 +1,5 @@
 doctest for my_list module
--------------------
+------------------------
 Test instantiation and inheritance:
 >>> MyList = __import__('1-my_list').MyList
 >>> isinstance(MyList(), list)
