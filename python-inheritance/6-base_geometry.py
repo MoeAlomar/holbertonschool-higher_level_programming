@@ -5,6 +5,7 @@
 class BaseGeometry():
     """A class with area() function that raises an exception
     because it not implemented yet"""
+
     def area(self):
         """Empty area method.
 
