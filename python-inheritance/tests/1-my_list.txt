@@ -37,3 +37,7 @@ Test print_sorted on empty list:
 >>> empty_list = MyList()
 >>> empty_list.print_sorted()
 []
+
+Test print_sorted() returns a new list
+>>> iList.print_sorted()
+[]
