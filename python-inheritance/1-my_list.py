@@ -11,6 +11,6 @@ class MyList(list):
         """
         print_sorted is a method that will print the list of the class
         """
-        sorted_my_list = my_list
+        sorted_my_list = self.my_list
         sorted_my_list.sort()
         print(self.sorted_my_list)
