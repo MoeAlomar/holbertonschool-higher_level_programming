@@ -13,4 +13,4 @@ class MyList(list):
         """
         sorted_mylist = self.copy()
         sorted_mylist.sort()
-        print(self.sorted_mylist)
+        print(sorted_mylist)
