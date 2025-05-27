@@ -15,4 +15,3 @@ class MyList(list):
         sorted_mylist = self.copy()
         sorted_mylist.sort()
         print(sorted_mylist)
-        return sorted_mylist
