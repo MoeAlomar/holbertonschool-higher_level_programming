@@ -1,0 +1,14 @@
+doctest for lookup module
+-------
+
+>>> lookup(int)
+[...]
+
+>>> lookup(float)
+[...]
+
+>>> lookup(obj)
+[...]
+
+>>> lookup(list())
+>>> [...]
