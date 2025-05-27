@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""here we define lookup class, a class that looks up for an object's method.
+"""here we define lookup method, a class that looks up for an object's method.
 """
 
 
