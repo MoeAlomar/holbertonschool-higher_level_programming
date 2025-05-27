@@ -7,7 +7,7 @@ class BaseGeometry():
     because it not implemented yet"""
     def area(self):
         """Empty area method.
-        
+
         Raises:
             Exception: because area function is not implemented yet.
         """
