@@ -9,7 +9,6 @@ class MyList(list):
     """
     my_list = list
 
-    
     def print_sorted(self):
         """
         print_sorted is a method that will print the list of the class
