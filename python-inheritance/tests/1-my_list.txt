@@ -39,6 +39,6 @@ Test print_sorted on empty list:
 []
 
 Test print_sorted() returns a new list
->>> iList = MyList
+>>> iList = MyList()
 >>> iList.print_sorted()
 []
