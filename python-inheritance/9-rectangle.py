@@ -29,5 +29,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """basic str method that will return
-        how a variable of rectangle should be printed like [Rectangle] <width>/<height>"""
+        how a variable of rectangle should be printed like:
+        [Rectangle] <width>/<height>"""
         return f"[Rectangle] {self.__width}/{self.__height}"
