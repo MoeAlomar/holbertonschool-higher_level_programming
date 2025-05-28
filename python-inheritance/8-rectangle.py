@@ -4,6 +4,7 @@ and will be used to make a rectangle.
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """here is the starting point of our Rectangle class that inherits BaseGeometry."""
 
@@ -20,3 +21,4 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
+ß
