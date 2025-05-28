@@ -45,31 +45,31 @@ Traceback (most recent call last):
 ValueError: x must be greater than 0
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(“age”, (4,))
+>>> bg.integer_validator("age", (4,))
 TraceBack (most recent call last):
 ...
 TypeError: x must be an integer
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(“age”, [1])
+>>> bg.integer_validator("age", [1])
 TraceBack (most recent call last):
 ...
 TypeError: x must be an integer
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(“age”, True)
+>>> bg.integer_validator("age", True)
 TraceBack (most recent call last):
 ...
 TypeError: x must be an integer
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(“age”, {3, 1})
+>>> bg.integer_validator("age", {3, 1})
 TraceBack (most recent call last):
 ...
 TypeError: x must be an integer
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(“age”, None)
+>>> bg.integer_validator("age", None)
 TraceBack (most recent call last):
 ...
 TypeError: x must be an integer
