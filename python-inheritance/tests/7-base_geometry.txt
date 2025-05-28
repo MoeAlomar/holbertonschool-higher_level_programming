@@ -9,19 +9,19 @@ doctest for base_geometry module
 >>> bg.area()
 Traceback (most recent call last):
 ...
-area() is not implemented
+Exception: area() is not implemented
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", "a")
 Traceback (most recent call last):
 ...
-x must be an integer
+TypeError: x must be an integer
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", 0)
 Traceback (most recent call last):
 ...
-x must be greater than 0
+ValueError: x must be greater than 0
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("x", 2)
@@ -42,4 +42,4 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator("x", -4)
 Traceback (most recent call last):
 ...
-x must be greater than 0
+ValueError: x must be greater than 0
