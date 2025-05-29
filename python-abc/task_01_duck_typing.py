@@ -11,12 +11,12 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         """area is a an abstract method to be implemented."""
-        ...
+        pass
 
     @abstractmethod
     def perimeter(self):
         """an abstract method to calc the perimeter"""
-        ...
+        pass
 
 
 class Circle:
@@ -58,9 +58,11 @@ class Rectangle:
         of the class Shape to calc the perimeter of the rectangle."""
         return 2 * (self._height + self._width)
 
+
 def shape_info(thing):
     print(thing.area())
     print(thing.perimeter())
+
 
 circle = Circle(3)
 rect = Rectangle(3, 5)
