@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
+import math
 """in this module we should try duck typing by creating an abstract class
 and implementing it through different classes with the same methods."""
 
@@ -31,12 +32,12 @@ class Circle:
     def area(self):
         """here we are implementing the area method for circle class
         to calculate the area of the circle and return it"""
-        return 3.14 * (self._r**2)
+        return math.pi * (self._r**2)
 
     def perimeter(self):
         """this method is implemented to calculate the perimeter
         of the circle and return it."""
-        return 2 * 3.14 * self._r
+        return 2 * math.pi * self._r
 
 
 class Rectangle:
@@ -57,7 +58,11 @@ class Rectangle:
         of the class Shape to calc the perimeter of the rectangle."""
         return 2 * (self._height + self._width)
 
-
 def shape_info(thing):
     print(thing.area())
     print(thing.perimeter())
+
+circle = Circle(3)
+rect = Rectangle(3, 5)
+shape_info(circle)
+shape_info(rect)
