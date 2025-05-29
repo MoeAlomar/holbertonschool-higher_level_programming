@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
+"""in this module we should create an abstract class Animal
+and implement it and its method through two diff classes."""
 
 
 class Animal(ABC):
