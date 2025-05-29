@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """this module extends rectangle to make a square, because every square
 is a rectangle but vice bersa is not always right."""
 Rectangle = __import__('9-rectangle').Rectangle
