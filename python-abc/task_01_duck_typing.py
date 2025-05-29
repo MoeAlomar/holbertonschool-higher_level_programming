@@ -18,7 +18,7 @@ class Shape(ABC):
         ...
 
 
-class Circle(Shape):
+class Circle:
     """Circle is a class that implements the abstract Shape class."""
 
     def __init__(self, r):
@@ -39,7 +39,7 @@ class Circle(Shape):
         return 2 * 3.14 * self._r
 
 
-class Rectangle(Shape):
+class Rectangle:
     """Rectangle class implements the abstract class Shape as a Rectangle."""
 
     def __init__(self, height, width):
@@ -57,11 +57,7 @@ class Rectangle(Shape):
         of the class Shape to calc the perimeter of the rectangle."""
         return 2 * (self._height + self._width)
 
+
 def shape_info(thing):
     print(thing.area())
     print(thing.perimeter())
-
-circle = Circle(3)
-rect = Rectangle(3, 5)
-print(f"{circle.area()} / {circle.perimeter()}")
-print(f"{rect.area()} / {rect.perimeter()}")
