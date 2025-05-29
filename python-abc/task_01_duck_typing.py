@@ -19,7 +19,7 @@ class Shape(ABC):
         pass
 
 
-class Circle:
+class Circle(Shape):
     """Circle is a class that implements the abstract Shape class."""
 
     def __init__(self, r):
@@ -40,7 +40,7 @@ class Circle:
         return 2 * math.pi * self._r
 
 
-class Rectangle:
+class Rectangle(Shape):
     """Rectangle class implements the abstract class Shape as a Rectangle."""
 
     def __init__(self, height, width):
