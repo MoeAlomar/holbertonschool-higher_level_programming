@@ -16,7 +16,7 @@ class Square(Rectangle):
         Raises:
             TypeError: if size is not an integer.
             ValueError: if size is equal or less than 0."""
-        self.integer_validator("size", size):
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
