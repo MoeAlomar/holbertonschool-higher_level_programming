@@ -27,7 +27,7 @@ class Shape(ABC):
     @abstractmethod
     def perimeter(self):
         """Calculate and return the perimeter of the shape.
-        
+
         Returns:
             float: The perimeter of the shape.
         """
@@ -47,17 +47,17 @@ class Circle(Shape):
 
     def area(self):
         """Calculate and return the area of the circle.
-        
+
         Returns:
-            float: The area of the circle (π * r²).
+            float: The area of the circle.
         """
         return math.pi * (self._radius ** 2)
 
     def perimeter(self):
         """Calculate and return the perimeter of the circle.
-        
+
         Returns:
-            float: The perimeter of the circle (2 * π * r).
+            float: The perimeter of the circle.
         """
         return 2 * math.pi * self._radius
 
