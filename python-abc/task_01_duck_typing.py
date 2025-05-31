@@ -41,7 +41,8 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
-    """Rectangle class implements the abstract class Shape as a Rectangle."""
+    """Rectangle class implements the abstract class Shape as a Rectangle.
+    """
 
     def __init__(self, width, height):
         """the initializer method takes width and height of the Rectangle"""
@@ -60,6 +61,7 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Function that accepts a Shape object and prints its area and perimeter"""
+    """Function that accepts a Shape object and prints
+    its area and perimeter"""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
