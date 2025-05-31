@@ -2,9 +2,13 @@
 
 
 class SwimMixin:
-    """This class defines a swim method that prints a statement."""
+    """A mixin class that provides swimming behavior.
 
+    Methods:
+        swim(): Prints a message indicating the creature swims.
+    """
     def swim(self):
+        """Prints a message indicating the creature swims."""
         print("The creature swims!")
 
 
