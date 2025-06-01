@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """Abstract base class for shapes."""
 
@@ -21,6 +22,7 @@ class Shape(ABC):
             float: The perimeter of the shape.
         """
         pass
+
 
 class Circle(Shape):
     """Class representing a circle, inheriting from Shape."""
@@ -48,6 +50,7 @@ class Circle(Shape):
             float: The perimeter of the circle.
         """
         return 2 * math.pi * self.radius
+
 
 class Rectangle(Shape):
     """Class representing a rectangle, inheriting from Shape."""
@@ -78,6 +81,7 @@ class Rectangle(Shape):
         """
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """Print the area and perimeter of a shape.
 
@@ -86,14 +90,3 @@ def shape_info(shape):
     """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-# Example usage:
-if __name__ == "__main__":
-    circle = Circle(5)
-    rectangle = Rectangle(4, 7)
-
-    print("Circle:")
-    shape_info(circle)  # Should print the area and perimeter of the circle
-
-    print("\nRectangle:")
-    shape_info(rectangle)  # Should print the area and perimeter of the rectangle
