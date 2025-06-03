@@ -16,8 +16,8 @@ def read_file(filename=""):
         an empty string.
 
     Returns:
-        str: The first line of the file if available, otherwise an empty
-        string.
+        str: The first line of the file with trailing newline removed,
+        or an empty string if the file is empty or filename is empty.
 
     Raises:
         FileNotFoundError: If the file does not exist.
@@ -26,4 +26,4 @@ def read_file(filename=""):
         reading the file.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        return f.read()
+        return f.readline().rstrip('\n')
