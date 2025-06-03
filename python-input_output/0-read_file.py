@@ -26,4 +26,4 @@ def read_file(filename=""):
         reading the file.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        return f.readline()
+        return f.read()
