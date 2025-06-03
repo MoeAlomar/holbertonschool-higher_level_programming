@@ -5,6 +5,7 @@ Module: 12-pascal_triangle
 This module contains a function that generates Pascal’s triangle up to n rows.
 """
 
+
 def pascal_triangle(n):
     """
     Returns a list of lists representing the Pascal’s triangle of n.
