@@ -13,13 +13,18 @@ to a file named 'add_item.json'.
 """
 
 import sys
+import os
 import json
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 # Create empty list to store command line arguments
-items = load_from_json_file("add_item.json")
+filename "add_item.json"
+if os.path.exists(filename):
+    items = load_from_json_file(filename)
+else:
+    items = []
 
 # Process command line arguments (skip script name at index 0)
 for i in range(1, len(sys.argv)):
