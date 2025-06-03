@@ -11,7 +11,7 @@ Functions:
 """
 
 
-def class_to_obj(obj):
+def class_to_json(obj):
     """
     Convert an object's instance attributes to a dictionary.
     
