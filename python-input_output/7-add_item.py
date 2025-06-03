@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: add_item_script
+Module: 7-add_item.py
 
 This module processes command line arguments and saves them to a JSON file.
 It imports functions from external modules to handle JSON file operations.
@@ -31,4 +31,4 @@ for i in range(1, len(sys.argv)):
     items.append(sys.argv[i])
 
 # Save the list to JSON file
-save_to_json_file(list, "add_item.json")
+save_to_json_file(items, "add_item.json")
