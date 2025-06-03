@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: student_filtered
+Module: 10-student.py
 
 This module defines a Student class that represents a student with basic
 personal information. The class provides functionality to convert student
@@ -8,30 +8,31 @@ instances to dictionary format with optional attribute filtering for
 JSON serialization.
 
 Classes:
-    Student: A class representing a student with first name, last name, and age,
-             with support for filtered dictionary conversion.
+    Student: A class representing a student with:
+    first name, last name, and age
+    with support for filtered dictionary conversion.
 """
 
 
 class Student:
     """
     A class to represent a student with filtering capabilities.
-    
+
     This class stores basic information about a student including their
     first name, last name, and age. It provides methods to convert the
-    student object to a dictionary format with optional attribute filtering,
+    student object to a dictionary format with optional filtering.
     suitable for JSON serialization.
-    
+
     Attributes:
         first_name (str): The student's first name.
         last_name (str): The student's last name.
         age (int): The student's age.
     """
-    
+
     def __init__(self, first_name, last_name, age):
         """
         Initialize a Student instance.
-        
+
         Args:
             first_name (str): The student's first name.
             last_name (str): The student's last name.
@@ -50,22 +51,23 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-        Convert the Student instance to a dictionary with optional filtering.
-        
+        Convert the Student instance to a dictionary.
+
         This method returns a dictionary representation of the student
         object. If attrs is provided as a list, only the attributes
-        specified in the list will be included in the returned dictionary.
-        If attrs is None or not a list, all instance attributes are returned.
-        
+        specified in the list will be included
+        in the returned dictionary If attrs is None or not a list
+        all instance attributes are returned.
+
         Args:
             attrs (list, optional): A list of attribute names to include
                                    in the returned dictionary. If None,
                                    all attributes are included.
-        
+
         Returns:
             dict: A dictionary containing the requested instance attributes
                   of the student object as key-value pairs.
-        
+
         Example:
             >>> student = Student("Jane", "Smith", 22)
             >>> student.to_json()
