@@ -37,7 +37,7 @@ class Student:
             first_name (str): The student's first name.
             last_name (str): The student's last name.
             age (int): The student's age.
-        
+
         Example:
             >>> student = Student("John", "Doe", 20)
             >>> student.first_name
