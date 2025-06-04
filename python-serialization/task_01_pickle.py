@@ -22,21 +22,29 @@ class CustomObject:
         """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
-        print(f"Is student: : {self.is_student}", end="")
+        print(f"Is student: {self.is_student}")
     
     def serialize(self, filename):
         """
         this function serializes the instance of object 
         in the filename.
         """
-        with open(filename, "w") as f:
-            pickle.dump(self, f)
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+        except(OSError, pickle.PicklingError):
+            return None
 
     @classmethod
     def deserialize(cls, filename):
         """
         this function deserializes as an object of the class.
         """
-        with open(filename, "r") as f:
-            cls = pickle.load(f)
-        return cls
+        try:
+            with open(filename, "rb") as f:
+                obj = pickle.load(f)
+                if isinstance(obj, cls):
+                    return cls
+                return None
+        except(OSError, pickle.UnpicklingError, EOFError):
+            return None
