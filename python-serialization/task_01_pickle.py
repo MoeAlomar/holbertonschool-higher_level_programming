@@ -2,23 +2,30 @@
 import pickle
 
 
-""" this module is to serialize and deserialize a class using
-pickling."""
+"""This module provides functionality to serialize and deserialize
+a class using pickling."""
+
+
 class CustomObject:
-    """
-    this is the Customobject class
-    that we will serialize and deserialize.
-    """
+    """A class to represent an object that can be serialized and deserialized."""
+    
     def __init__(self, name="", age=0, is_student=True):
-        """ our init to set the attr with the given values.""" 
+        """Initialize a CustomObject with name, age, and student status.
+        
+        Args:
+            name (str): The name of the object (default: "").
+            age (int): The age of the object (default: 0).
+            is_student (bool): Whether the object is a student (default: True).
+        """
         self.name = name
         self.age = age
         self.is_student = is_student
 
     def display(self):
-        """display method that prints the instance in the following format:
+        """Display the object's attributes in a formatted manner.
+        
         Example:
-            Name: john
+            Name: John
             Age: 25
             Is student: True
         """
@@ -27,26 +34,35 @@ class CustomObject:
         print(f"Is student: {self.is_student}")
     
     def serialize(self, filename):
-        """
-        this function serializes the instance of object 
-        in the filename.
+        """Serialize the instance to a file.
+        
+        Args:
+            filename (str): The name of the file to store the serialized object.
+        
+        Returns:
+            None: If serialization fails due to an error.
         """
         try:
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
-        except(OSError, pickle.PicklingError):
+        except (OSError, pickle.PicklingError):
             return None
 
     @classmethod
     def deserialize(cls, filename):
-        """
-        this function deserializes as an object of the class.
+        """Deserialize an instance from a file.
+        
+        Args:
+            filename (str): The name of the file containing the serialized object.
+        
+        Returns:
+            CustomObject: The deserialized instance if successful, else None.
         """
         try:
             with open(filename, "rb") as f:
                 obj = pickle.load(f)
                 if isinstance(obj, cls):
-                    return cls
+                    return obj
                 return None
-        except(OSError, pickle.UnpicklingError, EOFError):
+        except (OSError, pickle.UnpicklingError, EOFError):
             return None
