@@ -20,7 +20,7 @@ def fetch_and_save_posts():
         for post in posts:
             listed.posts.append({
                 'id' : post['id'],
-                'title' : post['title']
+                'title' : post['title'],
                 'body' : post['body']
             })
 
