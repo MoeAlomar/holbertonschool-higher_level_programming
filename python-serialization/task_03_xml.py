@@ -10,25 +10,14 @@ def serialize_to_xml(dictionary, filename):
         child.text = str(value)
 
     tree = ET.ElementTree(root)
-    tree.write(filename, encoding='utf-8', xml_declaration=True)
+    tree.write(filename)
 
 
 def deserialize_from_xml(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
-
     result = {}
-    for child in root:
-        text = child.text
-        if text is None:
-            value = None
-        elif text.isdigit():
-            value = int(text)
-        else:
-            try:
-                value = float(text)
-            except ValueError:
-                value = text
-        result[child.tag] = value
 
+    for child in root:
+        result[child.tag] = child.text
     return result
