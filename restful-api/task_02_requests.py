@@ -4,7 +4,7 @@ import csv
 
 
 def fetch_and_print_posts():
-    r = requests.get('https://jsonplaceholder.typicode.com/todos/1')
+    r = requests.get('https://jsonplaceholder.typicode.com/posts')
     print(f"Status code: {r.status_code}")
     if r.status_code == 200:
         posts = r.json()
@@ -12,13 +12,13 @@ def fetch_and_print_posts():
           print(post['title'])
 
 def fetch_and_save_posts():
-    r = requests.get('https://jsonplaceholder.typicode.com/todos/1')
+    r = requests.get('https://jsonplaceholder.typicode.com/posts')
     if r.status_code == 200:
         posts = r.json()
 
         listed_posts = []
         for post in posts:
-            listed.posts.append({
+            listed_posts.append({
                 'id': post['id'],
                 'title': post['title'],
                 'body': post['body']
