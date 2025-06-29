@@ -1,6 +1,5 @@
--- Creating a table with name being not null
--- using simple create table with NOT NULL Constraint
-CREATE TABLE force_name IF NOT EXISTS (
-id INT,
-name VARCHAR(256) NOT NULL
+-- Create table force_name if it doesn't exist in the database passed as an argument
+CREATE TABLE IF NOT EXISTS force_name (
+    id INT,
+    name VARCHAR(256) NOT NULL
 );
