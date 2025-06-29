@@ -3,5 +3,5 @@
 -- Select the score and count how many times each score appears, sorted by count descending
 SELECT SCORE, COUNT(*) AS number
 FROM second_table
-GROUP BY SCORE
+GROUP BY score
 ORDER BY number DESC;
