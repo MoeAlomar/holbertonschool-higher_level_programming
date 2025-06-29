@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS states (
     name VARCHAR(256) NOT NULL
 );
 
--- Create table cities if it doesn't exist
+-- Create table cities
 CREATE TABLE IF NOT EXISTS cities (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     state_id INT NOT NULL,
