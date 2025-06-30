@@ -44,4 +44,8 @@ if __name__ == '__main__':
     print(', '.join(final_array))
 
     cursor.close()
+<<<<<<< HEAD
     db.close()
+=======
+    db.close()
+>>>>>>> 5f9cb42 (Task 5 errors)
