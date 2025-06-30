@@ -14,9 +14,9 @@ if __name__ == '__main__':
                database name and state name")
         exit(1)
 
-    state = ' '.join(argv[4].split())
+    argument = ' '.join(argv[4].split())
 
-    if (re.search('^[a-zA-Z ]+$', state) is None):
+    if (re.search('^[a-zA-Z ]+$', argument) is None):
         print('Please enter a valid name State')
         exit(1)
 
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     result_quantity = cursor.execute("SELECT cities.name FROM cities\
                     INNER JOIN states ON cities.state_id=states.id\
                     WHERE states.name = '{:s}'\
-                    ORDER BY cities.id ASC;".format(state))
+                    ORDER BY cities.id ASC;".format(argument))
 
     data_of_query = cursor.fetchall()
 
@@ -44,8 +44,4 @@ if __name__ == '__main__':
     print(', '.join(final_array))
 
     cursor.close()
-<<<<<<< HEAD
     db.close()
-=======
-    db.close()
->>>>>>> 5f9cb42 (Task 5 errors)
