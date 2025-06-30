@@ -17,11 +17,11 @@ if __name__ == "__main__":
         print('Please enter a valid name State')
         exit(1)
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
+    cursor.execute("SELECT cities.name, FROM cities\
                     INNER JOIN states ON cities.state_id=states.id\
                     WHERE states.name = '{:s}' ORDER BY cities.id ASC;".format(state))
 
     for row in cursor.fetchall():
-        print(row)
+        print(row, end=',')
     cursor.close()
     db.close()
