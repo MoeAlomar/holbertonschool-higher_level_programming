@@ -14,9 +14,9 @@ if __name__ == '__main__':
                database name and state name")
         exit(1)
 
-    argument = ' '.join(argv[4].split())
+    state = ' '.join(argv[4].split())
 
-    if (re.search('^[a-zA-Z ]+$', argument) is None):
+    if (re.search('^[a-zA-Z ]+$', state) is None):
         print('Please enter a valid name State')
         exit(1)
 
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     result_quantity = cursor.execute("SELECT cities.name FROM cities\
                     INNER JOIN states ON cities.state_id=states.id\
                     WHERE states.name = '{:s}'\
-                    ORDER BY cities.id ASC;".format(argument))
+                    ORDER BY cities.id ASC;".format(state))
 
     data_of_query = cursor.fetchall()
 
