@@ -19,7 +19,7 @@ def generate_invitations(template, attendees):
     for attendee in attendees:
         name = attendee.get("name") or "N/A"
         title = attendee.get("title") or "N/A"
-        date = attende.get("event_date") or "N/A"
+        date = attendee.get("event_date") or "N/A"
         location = aattende.get("event_location") or "N/A"
 
         message = template
