@@ -5,15 +5,15 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 def generate_invitations(template, attendees):
     if not isinstance(template, str):
-        log.error("Error: template must be a string")
+        logging.error("Error: template must be a string")
     if not isinstance(attendees, list) or not all(isinstance(item, dict) for item in attendees):
-        log.error("Invalid attendees list. Expected a list of dictionaries.")
+        logging.error("Invalid attendees list. Expected a list of dictionaries.")
 
     if not template.strip():
-        log.error("Error: Template cannot be empty.")
+        logging.error("Error: Template cannot be empty.")
 
     if not attendees:
-        log.error("Error: No data provided, no output files generated.")
+        logging.error("Error: No data provided, no output files generated.")
 
     i = 1
     for attendee in attendees:
@@ -30,11 +30,11 @@ def generate_invitations(template, attendees):
 
         filename = f"file_output_{i}.txt"
         if os.path.exists(filename):
-            log.error(f"Error: {filename} already exists")
+            logging.error(f"Error: {filename} already exists")
         try:
             with open(filename, 'w') as file:
                 file.write(message)
-            log.info("File is created succesfully!.")
+            logging.info("File is created succesfully!.")
         except Exception as e:
-            log.error(f"Failed to write to {filename}: {e}")
+            logging.error(f"Failed to write to {filename}: {e}")
         
