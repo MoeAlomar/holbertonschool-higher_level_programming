@@ -34,7 +34,7 @@ def generate_invitations(template, attendees):
         message = message.replace("{event_date}", date)
         message = message.replace("{event_location}", location)
 
-        filename = f"file_output_{i}.txt"
+        filename = f"output_{i}.txt"
         if os.path.exists(filename):
             logging.error(f"Error: {filename} already exists")
             i += 1
