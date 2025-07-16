@@ -68,7 +68,7 @@ def products():
         else:
             error= "Invalid ID"
             products = []
-    return render_template('product_displat.html', products=products, error=error)
+    return render_template('product_display.html', products=products, error=error)
 
 
 if __name__ == '__main__':
