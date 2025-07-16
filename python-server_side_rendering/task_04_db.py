@@ -9,7 +9,7 @@ def load_json(json_path):
     try:
         with open(json_path) as f:
             data = json.load(f)
-            return data.get('items', []), None
+            return data, None
     except Exception as e:
         return [], f"Error loading JSON: {e}"
 
