@@ -5,25 +5,25 @@ import sqlite3
 
 app = Flask(__name__)
 
-def load_json():
+def load_json(json_path):
     try:
-        with open('products.json') as f:
+        with open(json_path) as f:
             data = json.load(f)
             return data.get('items', []), None
     except Exception as e:
         return [], f"Error loading JSON: {e}"
 
-def load_csv():
+def load_csv(csv_path):
     try:
-        with open('products.csv', newline='') as f:
+        with open(csv_path, newline='') as f:
             reader = csv.DictReader(f)
             return list(reader), None
     except Exception as e:
         return [], f"Error loading CSV: {e}"
 
-def load_sql():
+def load_sql(sql_path):
     try:
-        conn = sqlite3.connect('products.db')
+        conn = sqlite3.connect(sql_path)
         cursor = conn.cursor()
         cursor.execute("SELECT id, name, category, price FROM Products")
         rows = cursor.fetchall()
@@ -44,11 +44,11 @@ def products():
     error = None
 
     if source == 'json':
-        products, error = load_json()
+        products, error = load_json('products.json')
     elif source == 'csv':
-        products, error = load_csv()
+        products, error = load_csv('products.csv')
     elif source == 'sql':
-        products, error = load_sql()
+        products, error = load_sql('products.db')
     else:
         error = "Wrong source"
 
